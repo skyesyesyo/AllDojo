@@ -1,0 +1,41 @@
+p{
+	color:#4375a0;
+	background-color: grey
+	border-right: 10px groove rgb(100,100,100);
+    border-left: 1px groove rgb(200,200,200);
+    text-decoration: underline;
+
+}
+#yoyo{
+	font-size:200%;
+}
+.ohha{
+	background-color: blue;
+	border: 5px solid gold;
+}
+* {
+   margin: 0;
+   padding: 0;
+   font-family: helvetica, georgia, sans-serif;
+   font-size: 16px;
+}
+div + p {
+   margin-top: 50px;
+}
+ul > li {
+   background: black;
+   color: white;
+}
+a[href*="facebook"] {
+   color: blue;
+}
+div {
+	font-weight: 900;
+    background-image: url("cherries.jpg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+ button {
+    border: 2px dotted green;
+}

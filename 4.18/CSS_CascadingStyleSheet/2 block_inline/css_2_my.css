@@ -1,0 +1,25 @@
+p{
+	background-color: grey;
+	display: inline-block;
+	/*display: none;*/
+}
+a{
+	/*background-color: lime;*/
+	/*display: block;*/
+	margin: 10px;
+	background: #eee;
+	color: black;
+	padding: 10px;
+
+}
+ul{
+	background-color:pink;
+	display: inline;
+}
+ul li{
+	background-color:orange;
+	display:inline;
+}
+.num{
+	display:block;
+}
