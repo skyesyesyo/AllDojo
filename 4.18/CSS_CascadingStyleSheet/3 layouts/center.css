@@ -1,0 +1,52 @@
+/*#div{
+	height: 200px;
+	width: 200px;
+	background: #eee;
+	margin: 0px auto;
+}
+p {
+  width: 60%;
+  margin: auto;
+  font: 14px/1.5 Helvetica, sans-serif;
+}*/
+/*#container{
+  background-color: yellow;
+  display: inline-block;
+}
+#box-1, #box-2, #box-3{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  display: inline-block;
+}
+#box-1{
+  background-color: green;
+  position: absolute;
+  top: 40px;
+}
+#box-2{
+  background-color: pink;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+#box-3{
+  background-color: blue;
+}*/
+#container{
+  width:200px;
+  height:200px;
+  background: blue;
+  position:relative;
+}
+#center-me{
+  background: red;
+  height: 100px;
+  width: 100px; 
+  margin: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
