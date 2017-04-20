@@ -1,0 +1,115 @@
+Your environment has been set up for using Node.js 6.10.2 (x64) and npm.
+
+C:\Users\Yesyesyo>cd desktop
+
+C:\Users\Yesyesyo\Desktop>md DojoAssignments
+
+C:\Users\Yesyesyo\Desktop>cd dojoassignmnets
+The system cannot find the path specified.
+
+C:\Users\Yesyesyo\Desktop>cd dojoassignments
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments>md WebFundamentals Python Mean IOS netCore
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\DojoAssignments
+
+04/17/2017  09:20 PM    <DIR>          .
+04/17/2017  09:20 PM    <DIR>          ..
+04/17/2017  09:20 PM    <DIR>          IOS
+04/17/2017  09:20 PM    <DIR>          Mean
+04/17/2017  09:20 PM    <DIR>          netCore
+04/17/2017  09:20 PM    <DIR>          Python
+04/17/2017  09:20 PM    <DIR>          WebFundamentals
+               0 File(s)              0 bytes
+               7 Dir(s)  444,398,796,800 bytes free
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments>cd webfundamentals
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>md Glt HTML CSS Javascript
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals
+
+04/17/2017  09:20 PM    <DIR>          .
+04/17/2017  09:20 PM    <DIR>          ..
+04/17/2017  09:20 PM    <DIR>          CSS
+04/17/2017  09:20 PM    <DIR>          Glt
+04/17/2017  09:20 PM    <DIR>          HTML
+04/17/2017  09:20 PM    <DIR>          Javascript
+               0 File(s)              0 bytes
+               6 Dir(s)  444,399,091,712 bytes free
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd css
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\CSS>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\CSS>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd glt
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Glt>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Glt>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd html
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd javascript
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Javascript>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Javascript>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd html
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML>copy nul indentation.html
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML
+
+04/17/2017  09:22 PM    <DIR>          .
+04/17/2017  09:22 PM    <DIR>          ..
+04/17/2017  09:22 PM                 0 about.txt
+04/17/2017  09:22 PM                 0 indentation.html
+               2 File(s)              0 bytes
+               2 Dir(s)  444,399,161,344 bytes free
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals>cd..
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments>dir /b /s
+C:\Users\Yesyesyo\Desktop\DojoAssignments\IOS
+C:\Users\Yesyesyo\Desktop\DojoAssignments\Mean
+C:\Users\Yesyesyo\Desktop\DojoAssignments\netCore
+C:\Users\Yesyesyo\Desktop\DojoAssignments\Python
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\CSS
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Glt
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Javascript
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\CSS\about.txt
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Glt\about.txt
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\HTML\indentation.html
+C:\Users\Yesyesyo\Desktop\DojoAssignments\WebFundamentals\Javascript\about.txt
+
+C:\Users\Yesyesyo\Desktop\DojoAssignments>

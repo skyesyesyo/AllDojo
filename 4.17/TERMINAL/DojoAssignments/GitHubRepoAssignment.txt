@@ -1,0 +1,125 @@
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL>md GitHubRepoAssignment
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL
+
+04/18/2017  09:24 PM    <DIR>          .
+04/18/2017  09:24 PM    <DIR>          ..
+04/17/2017  09:27 PM             4,550 assignments.txt
+04/17/2017  09:20 PM    <DIR>          DojoAssignments
+04/18/2017  09:24 PM    <DIR>          GitHubRepoAssignment
+04/17/2017  09:18 PM               302 Terminal.txt
+04/17/2017  09:32 PM           769,846 Terminal_MIT.jpg
+04/17/2017  09:11 PM    <DIR>          test
+               3 File(s)        774,698 bytes
+               5 Dir(s)  444,044,345,344 bytes free
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL>cd githubrepoassignment
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\GitHubRepoAssignment>git init
+Initialized empty Git repository in C:/Users/Yesyesyo/Desktop/Dojo/4.17/TERMINAL/GitHubRepoAssignment/.git/
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\GitHubRepoAssignment>copy nul readme.md
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\GitHubRepoAssignment>cd..
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL>cd dojoassignments
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments
+
+04/17/2017  09:20 PM    <DIR>          .
+04/17/2017  09:20 PM    <DIR>          ..
+04/17/2017  09:20 PM    <DIR>          IOS
+04/17/2017  09:20 PM    <DIR>          Mean
+04/17/2017  09:20 PM    <DIR>          netCore
+04/17/2017  09:20 PM    <DIR>          Python
+04/17/2017  09:20 PM    <DIR>          WebFundamentals
+               0 File(s)              0 bytes
+               7 Dir(s)  444,050,644,992 bytes free
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git init
+Initialized empty Git repository in C:/Users/Yesyesyo/Desktop/Dojo/4.17/TERMINAL/DojoAssignments/.git/
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        WebFundamentals/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git commit -m "Initial Commit"
+[master (root-commit) 8a5d0d0] Initial Commit
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Glt/about.txt
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git remote add origin https://github.com/skyesyesyo/GitHubRepoAssignment.git
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 425 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/skyesyesyo/GitHubRepoAssignment.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>copy nul readme.md
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>readme.md
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>cd add .
+The system cannot find the path specified.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git commit -m "Add readme.md"
+[master cc03dc5] Add readme.md
+ 1 file changed, 2 insertions(+)
+ create mode 100644 readme.md
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/skyesyesyo/GitHubRepoAssignment.git
+   8a5d0d0..cc03dc5  master -> master
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\TERMINAL\DojoAssignments>

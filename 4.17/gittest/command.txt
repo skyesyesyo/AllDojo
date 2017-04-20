@@ -1,0 +1,282 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17>md gittest
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17>cd gittest
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>copy nul index.html
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>copy nul styles.css
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>copy nul aboutme.txt
+        1 file(s) copied.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3821-F32D
+
+ Directory of C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest
+
+04/18/2017  08:53 PM    <DIR>          .
+04/18/2017  08:53 PM    <DIR>          ..
+04/18/2017  08:53 PM                 0 aboutme.txt
+04/18/2017  08:52 PM                 0 index.html
+04/18/2017  08:52 PM                 0 styles.css
+               3 File(s)              0 bytes
+               2 Dir(s)  444,067,192,832 bytes free
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>aboutme
+'aboutme' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>aboutme.txt
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add .
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git init
+Initialized empty Git repository in C:/Users/Yesyesyo/Desktop/Dojo/4.17/gittest/.git/
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+        add
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   aboutme.txt
+        new file:   index.html
+        new file:   styles.css
+
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git commit -m "1st update"
+[master (root-commit) b773d79] 1st update
+ 3 files changed, 2 insertions(+)
+ create mode 100644 aboutme.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git log
+commit b773d7993c29da214d4c83f6a08c95314c14e53e
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:01:51 2017 -0700
+
+    1st update
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>aboutme.txt
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   aboutme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git commit -m "2nd update"
+[master b4319be] 2nd update
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git log
+commit b4319bed3990d4b0d2c549e8eca6e01729ab3916
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:03:22 2017 -0700
+
+    2nd update
+
+commit b773d7993c29da214d4c83f6a08c95314c14e53e
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:01:51 2017 -0700
+
+    1st update
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git revert --no-edit HEAD
+error: Your local changes to the following files would be overwritten by merge:
+        aboutme.txt
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git commit -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git commit -m "Re 2nd"
+[master 3af0062] Re 2nd
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git revert --no-edit HEAD
+[master a5ff57e] Revert "Re 2nd"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git add .
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git commit -m "book"
+[master 737a4ac] book
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>git log
+commit 737a4ac4dbf4fffbde40ed491d6977c61a910d58
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:09:11 2017 -0700
+
+    book
+
+commit a5ff57e0d5758cb0edb7c4c51c3233c051aa0a53
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:08:34 2017 -0700
+
+    Revert "Re 2nd"
+
+    This reverts commit 3af00623070022d02caf84dfc7e8eda2a6c6a85b.
+
+commit 3af00623070022d02caf84dfc7e8eda2a6c6a85b
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:08:28 2017 -0700
+
+    Re 2nd
+
+commit b4319bed3990d4b0d2c549e8eca6e01729ab3916
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:03:22 2017 -0700
+
+    2nd update
+
+commit b773d7993c29da214d4c83f6a08c95314c14e53e
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:01:51 2017 -0700
+:...skipping...
+commit 737a4ac4dbf4fffbde40ed491d6977c61a910d58
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:09:11 2017 -0700
+
+    book
+
+commit a5ff57e0d5758cb0edb7c4c51c3233c051aa0a53
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:08:34 2017 -0700
+
+    Revert "Re 2nd"
+
+    This reverts commit 3af00623070022d02caf84dfc7e8eda2a6c6a85b.
+
+commit 3af00623070022d02caf84dfc7e8eda2a6c6a85b
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:08:28 2017 -0700
+
+    Re 2nd
+
+commit b4319bed3990d4b0d2c549e8eca6e01729ab3916
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:03:22 2017 -0700
+
+    2nd update
+
+commit b773d7993c29da214d4c83f6a08c95314c14e53e
+Author: yesyesyo_sk <stevekim.0730@gmail.com>
+Date:   Tue Apr 18 21:01:51 2017 -0700
+
+    1st update
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+C:\Users\Yesyesyo\Desktop\Dojo\4.17\gittest>
