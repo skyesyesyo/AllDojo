@@ -1,0 +1,74 @@
+* {
+	vertical-align: baseline;
+	/*font-weight: inherit;*/
+	font-family: inherit;
+	font-style: inherit;
+	/*font-size: 100%;*/
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0px;
+}
+
+.container{
+	/*height: 2000px;*/
+	width: 1200px;
+/*	background-color: #6f5964;*/
+	/*background: linear-gradient(to right, #1d0d11, #6f5964);*/
+	background: radial-gradient(#6f5964, #1d0d11);
+	padding: 15px 0 15px 15px;
+}
+
+.header{
+	width: 1200px;
+	background-color: #f5f5f5;
+	padding: 15px;
+}
+.header h1{
+	font-family: lucida console, normal;
+	font-style: italic;
+	display: inline-block;
+	width: 400px;
+}
+.header h3{
+	display: inline-block;
+	text-align: right;
+	width: 400px;
+	font-family: arial, normal;
+}
+
+.me{
+	height: 313px;
+	width: 465px;
+	display: inline-block;
+	border: 5px solid #f5f5f5;
+	/*background: url(photo_of_me.jpg) 0 0;*/
+	/*background-image: photo_of_me.jpg, "This is me";*/
+	/*content: photo_of_me.jpg, "This is me";*/
+	/*background-color: pink;*/
+}
+
+.me_about{
+	height: 321px;
+	width:690px;
+	background:linear-gradient(to right, #fefdfe, #dbcbda);
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+}
+
+/*.me_about */h3{
+	/*background-color: #898795;*/
+	background:linear-gradient(#b1b0b4, #898795,#b1b0b4);
+	padding: 7px;
+	color: white;
+	font-family: arial, normal;
+}
+
+.three{
+	display: inline-block;
+	background: pink;
+	height: 800px;
+	width: 381px;
+	margin:15px 15px 0 0;
+}
