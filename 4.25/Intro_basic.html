@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery demo!</title>
+		<link rel="stylesheet" type="jQuery.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				// alert("you are now working with jQuery!");
+
+				console.log("hihi");
+				
+				$('a').click(function(){
+					alert("you are now leaving the page!");
+				});
+
+				//effects methods
+				$("p").hide();
+
+				$("#hide").click(function(){
+					$("p").hide();
+				});
+
+				$("#show").click(function(){
+					$("p").show();
+				});
+				//manipulation methods
+				$("h3").hover(function(){
+					$("h2").text("go see the Space Needle!");
+				// }, function(){
+				// 	alert("now invoking the second function!")
+				});
+
+				$(".append").click(function(){
+					$(".result").append("<h4>.append add HTML! </h4");
+				});
+
+				//css method
+				$("button").click(function(){
+					$("button").css("background-color", "yellow")
+				})
+
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<p>This is a paragraph!!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button id="hide">This will hide all paragraphs!</button>
+		<button id="show">Click to show all paragraphs</button>
+		<a href="http://www.google.com" id="mylink">go to Google!</a>
+		<h3>Mountain View, California</h3>
+		<h2>Seattle, Washington</h2>
+		<button class="append">Click to see .append work!</button>
+		<div class="result"></div>	
+	</body>
+</html>;
