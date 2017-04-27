@@ -1,0 +1,46 @@
+* {
+	vertical-align: baseline;
+	/*font-weight: inherit;*/
+	/*font-family: inherit;*/
+	/*font-style: inherit;*/
+	/*font-size: 100%;*/
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	width: 500px;
+	/*height:1000px;*/
+	/*background-color: pink;*/
+	/*padding: 15px;*/
+}
+
+.tag {
+	border: 2px solid black;
+	/*background: green;*/
+}
+
+h1 {
+	text-align: center;
+}
+
+button {
+	display: inline-block;
+	margin:0 0 10px 10px;
+}
+
+.explain{
+	display: inline-block;
+}
+
+.img_sd, .explain_fi {
+	display: none;
+}
+/*.explain_fi{
+	display: none;
+}*/
+.red{
+	color: red;
+}
