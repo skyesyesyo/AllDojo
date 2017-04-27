@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Disappearing Ninja</title>
+		<link rel="stylesheet" type="text/css" href="Disappearing Ninja.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script>
+			var Ninjapic = ""
+			for(var i = 0; i < 10; i++){
+				Ninjapic += '<img src="ninja04.png" alt="Ninja">'			};
+				Ninjapic += "<button>Restore</button>"
+				$(document).ready(function(){
+					$(".container").append(Ninjapic)
+				
+				$("img").click(function(){
+					$(this).hide(2000)
+				});
+
+				$("button").click(function(){
+					$("img").show(1000);
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- <img src="ninja04.png" alt="Ninja"> -->
+		</div>
+	</body>
+</html>

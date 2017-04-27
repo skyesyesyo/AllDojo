@@ -68,8 +68,9 @@
 					$(".explain_txt").text("hihi")
 				});
 				$(".but_da").click(function(){
-					$(".explain_da").data("This works?")
-					var y = $(".data").data()
+					$(".explain_da").data("data-alt", "This works?")
+					var y = $(".explain_da").data()
+					console.log(y);
 				});
 			});
 		</script>
