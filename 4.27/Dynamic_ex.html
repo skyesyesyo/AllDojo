@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+<!-- 		<link rel="stylesheet" type="text/css" href="FILE_NAME!!!!!.css"> -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//1st video part
+				//Using .on()
+				// $('.alert').click(function(){
+				// 	alert('you clicked me!');
+				// });
+
+				$('.new_btn').click(function(){
+					$('#buttons').append("<button class='alert'>I am a dynamically generated button!</button>");
+				});
+
+				$(document).on('click', '.alert', function(){
+					alert('you clicked me!');
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<h3>Static Content!</h3>
+		<div>
+			<button class="alert">click me for a message!</button>
+			<button class="alert">click me for a message!</button>
+			<button class="alert">click me for a message!</button>
+			<button class="new_btn">click me to add a new button!</button>
+		</div>
+		<h3>Dynamically rendered content!</h3>
+		<div id="buttons"></div>
+	</body>
+</html>
