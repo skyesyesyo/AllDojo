@@ -6,22 +6,43 @@
 <!-- 		<link rel="stylesheet" type="text/css" href="FILE_NAME!!!!!.css"> -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				//1st video part
+			
+			//1st video part
 				//Using .on()
 				// $('.alert').click(function(){
 				// 	alert('you clicked me!');
 				// });
+			// $(document).ready(function(){
+			// 		$('.new_btn').click(function(){
+			// 		$('#buttons').append("<button class='alert'>I am a dynamically generated button!</button>");
+			// 	});
+			// 	$(document).on('click', '.alert', function(){
+			// 		alert('you clicked me!');
+			// 	});
+			// });
+
+			//2nd video part
+			//call back more Recommand way.
+
+			function callback_testname(){
+				$('.alert').click(function(){
+					alert('you clicked me!');
+				});
+			}
+
+			$(document).ready(function(){
+				//Callback for this one is for static content.
+				callback_testname();
 
 				$('.new_btn').click(function(){
 					$('#buttons').append("<button class='alert'>I am a dynamically generated button!</button>");
-				});
-
-				$(document).on('click', '.alert', function(){
-					alert('you clicked me!');
+					//callback for this one is for Dynamic content!
+					callback_testname();
 				});
 
 			});
+
+			
 		</script>
 	</head>
 	<body>

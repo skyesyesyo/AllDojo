@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="FILE_NAME!!!!!.css"> -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function callbackyoyo(){
+				$('h3').click(function(){
+					alert('You clicked an H3!')
+				});
+			}
+
+			$(document).ready(function(){
+				callbackyoyo();
+				$('h3').click(function(){
+					alert('You clicked an H3!')
+				});
+
+				$('button').click(function(){
+					$('div').append('<h3>I am a dynamically generated H3</h3>');
+					$('h3').click(function(){
+					alert('You clicked an h3!');  //***here it is!
+					callbackyoyo();
+					});
+				});
+			});
+
+			$('button').click(function(){
+				$('div').append('<h3>I am a dynamically generated H3</h3>');
+				$('h3').click(function(){
+					alert('You clicked an h3!');  //***here it is!
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<button>Click me to add a new h3 tag!</button>
+			<h3>Click me to see a message!</h3>
+		</div>
+	</body>
+</html>
