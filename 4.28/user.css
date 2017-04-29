@@ -1,0 +1,47 @@
+/** {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}*/
+	
+.container {
+	width: 1000px;
+	height: 1000px;
+}
+
+table {
+	display: table;
+	border-collapse: separate;
+/*	border-color: black;*/
+	border: 2px solid black;
+/*	border-spacing: 2px;*/
+	font-size: 30px;
+	padding: 5px;
+}
+
+th {
+	padding: 5px;
+}
+
+div {
+	width: 350px;
+	text-align: right;
+}
+
+h1 {
+	border-bottom: 2px solid black;
+	text-align: left;
+
+}
+p, button {
+	display: inline-block;
+	margin-top: 5px;
+	margin-top: 5px;
+
+}
