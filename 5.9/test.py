@@ -6,7 +6,7 @@ first_name = "Zen"
 last_name = "Coder"
 print "My name is {}      {}" .format(first_name, last_name)
 
-hw = "hello %s" %'world'
+hw = "hello %s" % first_name
 print hw
 
 h1w = "hello " 'world'
