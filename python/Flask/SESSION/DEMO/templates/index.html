@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Session Demo</title>
+		<style type="text/css">
+			input{
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello seesion</h1>
+
+		<!-- {% if 'error in session' %}
+			<h4>{{ session['error'] }}</h4>
+		{% endif %} -->
+
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul class='flashes'>
+			{% for message in messages %}
+				<li>{{message}}</li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+
+
+		<form action="/register" method="post">
+			Name: <input type="text" name="name">
+			Email: <input type="text" name="email">
+			Password: <input type="text" name="password">
+			Confirm Password: <input type="text" name="passconf">
+			<input type="submit">
+		</form>
+	</body>
+</html> 
