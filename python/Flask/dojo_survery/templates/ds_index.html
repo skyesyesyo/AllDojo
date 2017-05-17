@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dojo Survery Index</title>
+	</head>
+	<body>
+		<form action='/result' method="post">
+			Your Name: <input type="text" name="name">
+			<p>Dojo Location:
+				<select name='d_loc'>
+					<option value="sanjose">San Jose</option>
+					<option value="burbank">Burbank</option>
+				</select>
+			</p>
+			<p>Favorite Language:
+				<select name='fav'>
+					<option value="python">Python</option>
+					<option value="html">HTML</option>
+				</select>
+			</p>
+			<p>Comment (option): </p>
+			<p>
+				<textarea row="4" cols="50" name="comment"></textarea>
+			</p>
+			<input type="submit" name="submit" value="Button">
+		</form>
+	</body>
+</html>
