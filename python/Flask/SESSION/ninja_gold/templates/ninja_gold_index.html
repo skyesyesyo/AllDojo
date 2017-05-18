@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninja Money</title>
+		<link rel="stylesheet" type="text/css" href="/static/ninja_gold.css">
+	</head>
+	<body>
+		<div class=container>
+			<p> Your Gold: <span>{{gold}}</span></p>
+			<div class=locations>
+				<div class=places>
+					<h1 class=center>Farm</h1>
+					<p class=center>(earns 10-20 golds)</p>
+					<form action='/process_money' method='post'>
+						<input type="hidden" name="building" value="farm">
+						<input type="submit" value='Find Gold!'>
+					</form>
+				</div>
+				<div class=places>
+					<h1 class=center>Cave</h1>
+					<p class=center>(earns 5-10 golds)</p>
+					<form action='/process_money' method='post'>
+						<input type="hidden" name="building" value="cave">
+						<input type="submit" value='Find Gold!'>
+					</form>
+				</div>
+				<div class=places>
+					<h1 class=center>House</h1>
+					<p class=center>(earns 2-5 golds)</p>
+					<form action='/process_money' method='post'>
+						<input type="hidden" name="building" value="house">
+						<input type="submit" value='Find Gold!'>
+					</form>
+				</div>
+				<div class=places>
+					<h1 class=center>Casino</h1>
+					<p class=center>(earns/takes 0-50 golds)</p>
+					<form action='/process_money' method='post'>
+						<input type="hidden" name="building" value="casino">
+						<input type="submit" value='Find Gold!'>
+					</form>
+				</div>
+			</div>
+			<form action='/reset' method='post'>
+				<input type="submit" name="reset" value="RESET">
+			</form>
+			<p>Activities:</p>
+			<div class=acti>
+				<ul>
+				{% for event in events %}
+					<li class={{result}}>You made/lose {{event}}</li>
+				{% endfor %}
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>
