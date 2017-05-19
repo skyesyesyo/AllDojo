@@ -47,8 +47,10 @@
 			<p>Activities:</p>
 			<div class=acti>
 				<ul>
-				{% for event in events %}
-					<li class={{result}}>You made/lose {{event}}</li>
+				{% for msg, color in events %}
+				<!-- or for event in events -->
+				<!-- event[1] instead of color and event[0] instead of msg -->
+					<li class={{color}}>You made/lose {{msg}}</li>
 				{% endfor %}
 				</ul>
 			</div>

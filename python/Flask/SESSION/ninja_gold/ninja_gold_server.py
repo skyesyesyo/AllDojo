@@ -24,6 +24,7 @@ def p_money():
 	gold_amt_house = random.randrange(2,6)
 	gold_amt_casino = random.randrange(0,51)
 
+	
 
 	if building == "farm":
 		session['gold'] = session['gold'] + gold_amt_farm
@@ -37,12 +38,15 @@ def p_money():
 	if building == "casino":
 		if casino_w_l == 1:
 			session['gold'] = session['gold'] + gold_amt_casino
-			session['events'].append((gold_amt_casino))
-			session['result'] = "green"
+			session['events'].append((gold_amt_casino, 'green'))
+			# session['result'] = "green"
+			
 		if casino_w_l == 0:
 			session['gold'] = session['gold'] - gold_amt_casino
-			session['events'].append((gold_amt_casino * -1))
-			session['result'] = "red"
+			session['events'].append((gold_amt_casino * -1, 'red'))
+			# session['result'] = "red"
+			
+
 
 	return redirect('/')
 
