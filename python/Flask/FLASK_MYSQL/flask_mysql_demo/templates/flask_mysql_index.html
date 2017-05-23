@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>index</title>
+	</head>
+	<body>
+		{% for user in all_users %}
+			<ul>
+				<li>Name: {{user.first_name}} {{user['last_name']}}</li>
+				<!-- <li>Name: {{user['first_name']}}</li> -->
+			</ul>
+			<!-- <p>{{user}}</p> -->
+		{% endfor %}
+
+		<form action="/create_user" method="POST">
+			First Name: <input type="text name="first_name"><br>
+			last Name: <input type="text name="last_name"><br>
+			Handle: <input type="text name="handle"><br>
+			<input type="submit">
+
+			
+		</form>
+	</body>
+</html>
