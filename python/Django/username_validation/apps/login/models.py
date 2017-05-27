@@ -7,17 +7,31 @@ from django.db import models
 
 
 class UserManager(models.Manager):
-	"""docstring for UserManager"""
-	def validate(self, username):
+	def validate(self, post):
+		username = post['username']
+		password = post['password']
+		passconf = post['passconf']
 		errors = []
-		# success = 'Good job!'
+		# print '*' * 99
+		# print post
+		# print post['username']
+		# print '*' * 99
+
+		if not username:
+			errors.append('username field is required')
+		if not password:
+			errors.append('password field is required')
+		elif len(password) <8:
+			errors.append('password must be at least 8 characters long')
+		elif not password == passconf:
+			errors.append('password and confirm password much match')
+
+
 		if len(username) <8:
 			errors.append('username must be at least 8 characters long')
-			# return errors
 		if len(username) > 16:
 			errors.append('username cannot be more than 16 characters long')
 		return errors
-		# return success
 
 
 
@@ -28,3 +42,6 @@ class User(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 	objects = UserManager()
+	# Now we add password need to be able to save it to database
+	# Need to make migration after add new field.
+	password = models.CharField(max_length=255)
