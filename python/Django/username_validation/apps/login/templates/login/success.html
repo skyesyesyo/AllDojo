@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login & Reg | Success</title>
+	</head>
+	<body>
+		{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+			<li {% if message.tags %} class='{{message.tags}}'{% endif %}>
+				{{ message }}
+			</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+		<h3>Usernames entered:</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Created AT</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for user in users %}
+					<tr>
+						<td>{{user.username}}</td>
+						<td>{{user.created_at|date:"m/d/Y h:iA"}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>
