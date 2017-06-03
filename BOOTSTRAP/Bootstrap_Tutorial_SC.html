@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="EN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>Bootstrap Tutorial Part2</title>
+		<!-- importing Source Code -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<!-- Google fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+		<style type="text/css">
+			body {
+			  font-size: 62.5%;
+			  font-family: arial, sans-serif;
+			}
+			#nttLogo{
+			  height: 80px;
+			  /*width: 100px;*/
+			}
+			#websiteTitle{
+			  font-size: 10em;
+			  vertical-align: middle;
+			  font-family: 'Pacifico', cursive;
+			  padding-left: 15px;
+			  color: #191970;
+			}
+			#websiteSlogan{
+			  font-size: 5.4em;
+			}
+			/* Carousel Styling */
+			.slide1{
+			  background-image: url('bkgrnd1.jpg');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			.slide2{
+			  background-image: url('bkgrnd2.jpg');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			.slide3{
+			  background-image: url('bkgrnd3.jpg');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			.carousel-caption h1{
+			  font-size: 5.4em;
+			  font-family: 'Pacifico', cursive;
+			  padding-bottom: .4em;
+			}
+			.carousel-caption p{
+			  font-size: 2em;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!-- Example of using logo and import img! -->
+		<div class="container">
+			<div class="jumbotron">
+				<img src="ntt-logo.png" id="nttLogo" alt="Bakery Nosh Logo">
+				<span id="websiteTitle">Bakery Nosh</span>
+				<p id="websiteSlogan">Your friendly bakery!</p>
+			</div>
+		</div>
+		<!-- Carousel -->
+		<!-- You can only have one active each time -->
+		<div id="theCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Define how many slides to put in the carousel -->
+			<ol class="carousel-indicators">
+				<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#theCarousel" data-slide-to="1"></li>
+				<li data-target="#theCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="slide1"></div>
+					<div class="carousel-caption">
+						
+						<h1>Amazing Backgrounds</h1>
+							<p>Thousands of Backgrounds for Free</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="slide2"></div>
+					<div class="carousel-caption">
+						<h1>Thousands of Colors</h1>
+						<p>Every color you can Imagine</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="slide3"></div>
+					<div class="carousel-caption">
+						<h1>Amazing Illustrations</h1>
+						<p>And they are All Free</p>
+					</div>
+				</div>
+			</div>
+			<a href="#theCarousel" class="left carousel-control" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a href="#theCarousel" class="right carousel-control" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		<!-- end of Carousel -->
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		 
+		<!-- Use downloaded version of Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
