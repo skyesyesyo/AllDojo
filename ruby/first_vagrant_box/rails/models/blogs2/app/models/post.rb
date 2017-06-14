@@ -4,5 +4,8 @@ class Post < ActiveRecord::Base
 
   has_many :messages
 
+  # added the comments relationship
+  has_many :comments, as: :commentable
+
   validates :title, :content, presence: true
 end

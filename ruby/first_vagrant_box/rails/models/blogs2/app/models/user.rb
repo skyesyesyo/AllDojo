@@ -4,10 +4,19 @@ class User < ActiveRecord::Base
 	has_many :messages
 	has_many :posts
 
-	# 
+	# added the comments relationship
+	has_many :comments, as: :commentable
+	
+	# all the blogs owned by a specific user
 	has_many :blogs, through: :owners
 
+	# all the blogs a user has posted on
+	has_many :blog_posts, through: :posts, source: :blogs
+	
+	validates :email, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
+	
 	validates :first_name, :last_name, :email, presence: true
 	validates :first_name, length: { minimum: 2 }
 	validates :last_name, length: { minimum: 1 }
+	
 end
