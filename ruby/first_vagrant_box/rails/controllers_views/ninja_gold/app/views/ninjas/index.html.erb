@@ -1,0 +1,69 @@
+<style type="text/css">
+	form{
+		display: inline-block;
+		border:	1px solid purple;
+		margin: 10px;
+		padding: 2%;
+	}
+</style>
+
+
+<h3>Gold: <%= @gold %> </h3>
+
+<!-- Reset button -->
+<!-- data-method allow us to change the type of request -->
+<a href="/reset" data-method="DELETE">Reset</a>
+<!-- <a href="/reset" data-method="POST">Reset</a> -->
+
+<form method="POST" action="/ninjas">
+
+	<h4>Farms</h4>
+	<p>Earns 10-20 gold</p>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<input type="hidden" name="building" value="farm">
+	<input type="submit" value="Find Gold!">
+</form>
+
+<form method="POST" action="/ninjas">
+
+	<h4>Cave</h4>
+	<p>Earns 5-10 gold</p>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<input type="hidden" name="building" value="cave">
+	<input type="submit" value="Find Gold!">
+</form>
+
+<form method="POST" action="/ninjas">
+
+	<h4>House</h4>
+	<p>Earns 2-5 gold</p>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<input type="hidden" name="building" value="house">
+	<input type="submit" name="" value="Find Gold!">
+</form>
+
+<form method="POST" action="/ninjas">
+
+	<h4>Casino</h4>
+	<p>Earns/lose 0-50 gold</p>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<input type="hidden" name="building" value="casino">
+	<input type="submit" value="Find Gold!">
+</form>
+
+
+<h4>Activities</h4>
+<div style="border:1px solid black;">
+	<% @activities.each do |a| %>
+		<% if a['won'] == 'true' %>
+			<p style="color: green;"><%= a['message'] %></p>
+		<% else %>
+			<p style="color: red;"><%= a['message'] %></p>
+		<% end %>
+	<% end %>
+	
+</div>
