@@ -1,0 +1,38 @@
+<!-- <h1>Surveys#index</h1>
+<p>Find me in app/views/surveys/index.html.erb</p>
+ -->
+
+ <div id="container">
+ 	<form action="/survey" method="post">
+ 		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+ 		<div>
+ 			<label>Your Name:</label>
+ 			<input type="text" name="survey[name]">
+ 		</div>
+ 		<div>
+ 			<label>Dojo Location:</label>
+ 			<select name="survey[location]" class="select">
+ 				<option value="Mountain Valley, CA">Mountain Valley, SV</option>
+ 				<option value="San Diego, CA">San Diego, CA</option>
+ 				<option value="Seattle, Phoenix">Seattle, Pheonix</option>
+ 				<option value="San Jose, CA">San Jose, CA</option>
+ 			</select>
+ 		</div>
+ 		<div>
+ 			<label>Favorite language:</label>
+ 			<select name="survey[language]" class="select">
+ 				<option value="Javascript">Javascript</option>
+ 				<option value="PHP">PHP</option>
+ 				<option value="HTML">HTML</option>
+ 				<option value="CSS">CSS</option>
+ 			</select>
+ 		</div>
+ 		<div>
+ 			<label>Comment:</label>
+ 			<textarea rows="4" cols="35" name="SURVEY[comment]"></textarea>
+ 		</div>
+ 		<div>
+ 			<input type="submit" value="SUBMIT">
+ 		</div>
+ 	</form>
+ </div>
