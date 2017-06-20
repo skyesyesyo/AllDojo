@@ -1,0 +1,28 @@
+<h3>Listing  Dojos</h3>
+
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e|%>
+		<p style="color:red;"><%=e%></p>
+	<%end%>
+<%end%>
+
+<table class="table table-bordered table-striped">
+	<tr>
+		<th>Coding Dojo Branch</th>
+		<th>Street</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Actions </th>
+	</tr>
+	<% @dojos.each do |dojo| %>
+		<tr>
+			<td><%= dojo.branch %></td>
+			<td><%= dojo.street %></td>
+			<td><%= dojo.city %></td>
+			<td><%= dojo.state %></td>
+			<td> <a href="/dojos/<%= dojo.id %>">Show</a> | <a href="/dojos/<%= dojo.id %>/edit">Edit</a> | <a href="/dojos/<%= dojo.id %>" data-method="DELETE" data-confirm="Are you sure?">Destroy</a></td>
+		</tr>
+	<% end %>
+</table>
+
+<a href="/dojos/new">Create New Dojo</a>

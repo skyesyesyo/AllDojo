@@ -1,0 +1,18 @@
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e|%>
+		<p style="color:red;"><%=e%></p>
+	<%end%>
+<%end%>
+
+<form method="POST" action="/dojos/<%= @dojo.id %>">
+	<input type="hidden" name="_method" value="PUT">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	Branch: <input type="text" name="dojo[branch]" value="<%= @dojo.branch %>">
+	Street: <input type="text" name="dojo[street]" value="<%= @dojo.street %>">
+	City: <input type="text" name="dojo[city]" value="<%= @dojo.city %>">
+	Sate: <input type="text" name="dojo[state]" value="<%= @dojo.state %>">
+	<input type="submit" value="Add Dojo">
+</form>
+
+<a href="/">Home</a>
+<a href="/dojos/<%= @dojo.id %>">Show</a>
