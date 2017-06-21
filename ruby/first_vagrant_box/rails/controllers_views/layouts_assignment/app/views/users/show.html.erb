@@ -1,0 +1,19 @@
+<% content_for :title, 'Cat page' %>
+
+
+<% content_for :left do %>
+	<p>This is all the left sided content</p>
+	<img height="300" src="http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg">
+<% end %>
+
+<% content_for :right do %>
+	<p>This is all the right sided content</p>
+	<ul>
+		<% 1.upto(5) do |i| %>
+		<li>item <%= i %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>

@@ -1,0 +1,19 @@
+<% content_for :title, 'Dog page' %>
+
+
+<% content_for :left do %>
+	<p>This is all the left sided content</p>
+	<img height="300" src="https://s-media-cache-ak0.pinimg.com/736x/63/0f/0e/630f0ef3f6f3126ca11f19f4a9b85243.jpg">
+<% end %>
+
+<% content_for :right do %>
+	<p>This is all the right sided content</p>
+	<ul>
+		<% 1.upto(5) do |i| %>
+		<li>item <%= i %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>

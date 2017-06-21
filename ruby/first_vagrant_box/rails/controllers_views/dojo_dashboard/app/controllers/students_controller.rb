@@ -32,6 +32,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     if @student.update(student_params)
       redirect_to dojo_path(params[:dojo_id])
+      # redirect_to "/dojos/#{params[:dojo_id]}"
     else
       flash[:errors] = @student.errors.full_messages
       redirect_to :back

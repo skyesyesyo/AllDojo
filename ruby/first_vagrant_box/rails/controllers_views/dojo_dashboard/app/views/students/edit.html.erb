@@ -10,7 +10,7 @@
 		<p>Last name: <input type="text" name="student[last_name]" value="<%= @student.last_name %>"></p>
 		<p>Email: <input type="text" name="student[email]" value="<%= @student.email %>"></p>
 		<p>
-			Dojo: <select>
+			Dojo: <select name="student[dojo_id]">
 				<% @all_dojos.each do |d| %>
 					<% if d.id == @student.id %>
 						<option selected value="<%= d.id %>"><%= d.branch %></option>
