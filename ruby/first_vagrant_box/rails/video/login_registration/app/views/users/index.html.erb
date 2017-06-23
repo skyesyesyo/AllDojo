@@ -1,0 +1,31 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+		<p style="color: blue;"><%= e %></p>
+	<% end %>
+<% end %>
+
+
+<div>
+	<h3>Registration</h3>
+	<form action="/users" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		Name: <input type="text" name="user[name]">
+		Email: <input type="text" name="user[email]">
+		Password: <input type="password" name="user[password]">
+		Password config: <input type="password" name="user[password_confirmation]">
+		<input type="submit" name="" value="Register">
+	</form>
+</div>
+
+<div>
+	<h3>Login</h3>
+	<form action="/sessions" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		Email: <input type="text" name="user[email]">
+		Password: <input type="password" name="user[password]">
+		<input type="submit" name="" value="Login">
+	</form>
+</div>
