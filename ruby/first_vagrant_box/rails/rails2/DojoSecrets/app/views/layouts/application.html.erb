@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+va<!DOCTYPE html>
 <html>
 <head>
   <title>DojoSecrets</title>
@@ -15,6 +15,7 @@
 	<% end %>
 <% end %>
 
+<!-- Log out button show up if you login -->
 <% if current_user %>
 	<form action="/sessions/<%= current_user.id %>" method="POST">
 		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
