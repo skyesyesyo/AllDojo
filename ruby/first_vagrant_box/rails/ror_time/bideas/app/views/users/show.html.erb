@@ -1,0 +1,13 @@
+<% content_for :title, 'User Profile' %>
+
+<a href="/brightideas">Bright Ideas</a>
+
+<h3><strong>Name: <%= @user.name %></strong></h3>
+<h3><strong>Alias: <%= @user.alias %></strong></h3>
+<h3><strong>Email: <%= @user.email %></strong></h3>
+
+
+<p>------------------------------------------------</p>
+
+<h4>Total number of Post: <%= @user.brightideas.count %></h4>
+<h4>Total number of Likes <%= @like.count %></h4>

@@ -1,0 +1,40 @@
+<% content_for :title, 'Bright Ideas' %>
+
+<h1><strong>Hi <%= @user.name %></strong></h1>
+
+<!-- ADD New ideas -->
+<form action="/brightideas" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="hidden" value="<%= @user.id %>" name="bidea[user_id">
+	<p><input type="text" placeholder="Post something witty here..." name="bidea[content]" id="bidea_content"> <input type="submit" value="Idea!"></p>
+	<textarea name="" id="" cols="40" rows="1"></textarea>
+
+</form>
+	<a href="/brightideas" data-method="POST"></a>
+
+<!-- Show Ideas -->
+
+<% @brightideas.each do |bidea| %>
+	<div>
+		<p><a href="/users/<%= bidea.user.id %>"><%= bidea.user.name %></a> says: <strong><%= bidea.content %></strong></p>
+		<% if bidea.user == current_user %>
+			<form action="/brightideas/<%= bidea.id %>" method="POST">
+			    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="_method" value="delete">
+
+				<input type="submit" value="Delete Idea">
+
+			</form>
+		<% end %>
+		<p>
+			<form action="/likes" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="like[brightidea_id]" value = "<%= bidea.id %>">
+				<input type="submit" name="Like" value = "Like">
+			</form>
+			<a href="/brightideas/<%= bidea.id %>"><%= bidea.likes.count %> people </a> like this
+
+		</p>
+
+	</div>
+<% end %>

@@ -1,0 +1,23 @@
+<% content_for :title, 'Like Status Ideas' %>
+
+<a href="/brightideas">Bright Ideas</a>
+
+<div>
+	<h3><a href="/users/<%= @user.id %>"><%= @user.name %></a> says: <strong><%= @post.content %></strong></h3>
+		
+</div>
+
+<h3>People who liked this post:</h3>
+
+<table border="1">
+	<tr>
+		<td>Alias</td>
+		<td>Name</td>
+	</tr>
+	<% @likes.each do |l| %>
+	<tr>
+		<td><%= l.user.alias %></td>
+		<td><%= l.user.name %></td>
+	</tr>
+	<% end %>
+</table>
