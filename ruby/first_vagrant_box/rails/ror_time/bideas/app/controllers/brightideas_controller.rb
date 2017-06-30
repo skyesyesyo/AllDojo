@@ -11,7 +11,7 @@ class BrightideasController < ApplicationController
   	if @bidea.save
   		redirect_to :back
   	else
-  		flash[:errors] = @user.errors.full_messages
+  		flash[:errors] = @bidea.errors.full_messages
   		redirect_to :back
   	end
   end
