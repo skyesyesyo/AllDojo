@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>Students
+	<title></title>
+</head>
+<body>
+	<ul id="main">
+		
+	</ul>
+	<script type="text/javascript">
+		function appendList(array, id){
+			// One Option
+			// let str = '';
+			// for(let i = 0; i < array.length; i++){
+			// 	str += '<li>' + array[i] + '</li>';
+			// }
+			// document.getElementById(id).innerHTML = str;
+
+			// Another option
+			for(let j = 0; j < array.length; j++){
+				let new_item = document.createElement('li');
+				new_item.innerHTML = array[j];
+				document.getElementById(id).appendChild(new_item);
+			}
+		}
+		let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+	    let target_id = "main";
+	    appendList(students, target_id);
+	</script>
+
+</body>
+</html>

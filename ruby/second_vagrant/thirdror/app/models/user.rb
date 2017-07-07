@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :shoes
-  has_many :history_shoe, through: :historys, source: :shoe
+  has_many :histories
+  has_many :sales, through: :histories, source: :shoe
 
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
   validates :first_name, :last_name, presence: true
