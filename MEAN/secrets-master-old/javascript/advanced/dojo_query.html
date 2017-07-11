@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Query</title>
+</head>
+<body>
+<h1 id="header">Hello</h1>
+<script type="text/javascript">
+	var $Dojo = (function(){
+		let main = function(element){
+			var htmlObj;
+			if(element[0] == '#'){
+				htmlObj = document.getElementById(element.slice(1, element.length));
+			}else if(element[0] == '.'){
+				htmlObj = document.getElementByClassName(element.slice(1, element.length));
+			}
+			else{
+				htmlObj = document.getElementsByTagName(element);
+			}
+
+			htmlObj.click = function(callback){
+				htmlObj.addEventListener('click', callback);
+			}
+
+			htmlObj.hover = function(one, two){
+				htmlObj.addEventListener('mouseover', one);
+				htmlObj.addEventListener('mouseout', two);
+			}
+			return htmlObj;
+		}
+
+		return main;
+	}());
+
+	$Dojo('#header').click( ()=> {
+		console.log("You clicked on the header");
+	});
+
+	$Dojo('#header').hover( 
+		()=> {
+			console.log('Hovering in')
+		},
+		() => { 
+			console.log('Hovering Out')
+		}
+	);
+
+</script>
+</body>
+</html>
