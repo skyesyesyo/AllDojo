@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<h1 id="clicked"></h1>
+	<button>Click Me!!</button>
+	<h2 style="background-color:red; color:white; padding: 2px; display: inline-block; width:5vw;">Reset</h2>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			// This triggers the connection event in our server!
+			var socket = io.connect();
+			// We'll write all the socket stuff after the above line!
+			$('button').click(function (e){
+				e.preventDefault();
+				socket.emit("button_click", {button: 1});
+			});
+			$('h2').click(function(){
+				socket.emit('reset');
+			});
+			socket.on('increase', function (data){
+				console.log(data);
+				$('#clicked').text(data.number);
+			});
+		});
+	</script>
+
+</body>
+</html>

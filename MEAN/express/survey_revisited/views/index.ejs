@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<form action="/add" method="POST">
+		Name: <input type="text" name="name" id="name">
+		Location: <input type="text" name="location" id="location">
+		Favorite Language: <input type="text" name="favorite_language" id="language">
+		<input type="submit" value="Add User">
+	</form>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+    	$(document).ready(function (){
+    		// This triggers the connection event in our server!
+    		var socket = io.connect();
+    		// We'll write all the socket stuff after the above line!
+    		$('form').submit(function (e){
+    			e.preventDefault();
+    			socket.emit("form_submitted", {
+    				name: $('#name').val(),
+    				location: $('#location').val(),
+    				language: $('#language').val()
+    			});
+    		});
+    		socket.on('server_response', function (data){
+    			$('body').append("<p>Name is: " + data.name + "</p");
+    			$('body').append("<p>Location is: " + data.location + "</p>");
+    			$('body').append("<p>Favorite Language is: " + data.language + "</p>");
+    		});
+    	});
+    </script>
+</body>
+</html>

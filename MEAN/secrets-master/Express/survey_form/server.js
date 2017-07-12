@@ -22,6 +22,10 @@ app.get('/', function(request, response){
 
 app.post('/add', function(request, response){
 	request.session.name = request.body.name;
+
+	console.log(" the body ----",request.body.name);
+	console.log(" the session ----",request.session.name);
+
 	request.session.location = request.body.location;
 	request.session.favorite_language = request.body.favorite_language;
 	response.redirect('/success');
