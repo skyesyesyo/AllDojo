@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Registration</title>
+</head>
+<body>
+	 <% if(typeof(errors) != 'undefined' ) { %>
+	     <% for (var x in errors) { %>
+	      <p style="color:red;"><%= errors[x].message %></p>
+	     <% } %>
+	 <% } %>
+	<form method="POST" action="/users">
+		First Name: <input type="text" name="first_name">
+		Last Name: <input type="text" name="last_name">
+		Email: <input type="text" name="email">
+		Password: <input type="text" name="password">
+		Password Confirmation: <input type="text" name="password_confirmation">
+		Birthday: <input type="date" name="birthday">
+		<input type="submit" value="Register">
+	</form>
+</body>
+</html>

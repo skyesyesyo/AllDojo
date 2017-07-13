@@ -1,0 +1,13 @@
+#nav{
+	width: 15vw;
+	display:inline-block;
+	background: lightblue;
+	min-height: 50vh;
+	border: 1px solid black;
+	padding:1vh;
+	margin:1vh;
+}
+a{
+	display: block;
+	margin:1%;
+}
