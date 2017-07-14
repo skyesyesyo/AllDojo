@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Car Info</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<h2>Welcome to the Car Info!</h2>
+	<div>
+		<h3><%= cars.make %> <%= cars.model %></h3>
+		<p>Year: <%= cars.year %></p>
+		<% if(cars.image){ %>
+			<img class="img" src="<%= cars.image %>">
+		<% } %>
+	</div>		
+
+	<a href="/">Home</a>
+
+</body>
+</html>
