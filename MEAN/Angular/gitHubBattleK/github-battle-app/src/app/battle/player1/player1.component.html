@@ -1,0 +1,15 @@
+
+<!-- update user with followering data if everything is cool -->
+<div *ngIf="!playerInfo.username">
+	<h2>Player 1:</h2>
+	<form (submit)="player1Submit()" action="">
+		<input type="text" name="username" [(ngModel)]="player.username" #username="ngModel" >
+		<input type="submit">
+	</form>
+</div>
+<!-- it is kinda like else -->
+<div *ngIf="playerInfo.username">
+	<img src="{{playerInfo.imagePath}}" alt="player1Image" style="height:200px; width: auto;">
+	<p> {{ playerInfo.username }} </p>
+	
+</div>

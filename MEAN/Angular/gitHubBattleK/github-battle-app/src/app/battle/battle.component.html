@@ -1,0 +1,11 @@
+<!-- Has players submited both names yet? -->
+<!-- if yes show me the result! -->
+<div *ngIf="!battleStarted">
+	<app-player1 (player1Event)="dataFromPlayer1($event)" [playerInfo]="player1"></app-player1>
+	<app-player2></app-player2>
+	<button *ngIf="formFilled" (click)="startBattle()">Battle!</button>
+</div>
+
+<div *ngIf="battleStarted">
+	<app-result></app-result>
+</div>
